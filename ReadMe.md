@@ -18,7 +18,14 @@ mkdir APSI/build && cd APSI/build
 cmake .. -DCMAKE_TOOLCHAIN_FILE=../vcpkg/scripts/buildsystems/vcpkg.cmake -DAPSI_BUILD_CLI=ON
 make
 ```
-Install [SEAL](https://github.com/microsoft/SEAL) and install the build.
+Install [SEAL](https://github.com/microsoft/SEAL) as follows:
+```
+git clone https://github.com/microsoft/SEAL.git
+cd SEAL/
+cmake -S . -B build
+cmake --build build
+sudo cmake --install build
+```
 
 ## Building and running the project
 ### Inverted Index PSI
