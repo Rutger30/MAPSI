@@ -28,9 +28,9 @@ cd /InvertedIndex/
 ./APSIPeripheral/make_all.sh
 cmake -S . -B build
 
-./build/InvertedIndex $NetworkData.csv $IoC.csv $IIintersection.csv $Attributes.csv $No.Clusters $No.SlotInCiphertext(Batches) $PolynomialModulusDegree > $Logfile1.txt
+./build/InvertedIndex $/Path/NetworkData.csv $/Path/IoC.csv $/Path/IIintersection.csv $/Path/Attributes.csv $No.Clusters $No.SlotInCiphertext(Batches) $PolynomialModulusDegree > $Logfile1.txt
     
-./run_sender.sh $DataPath $NetworkData.csv $APSILogfileSender.txt > $Logfile2.txt &
+./run_sender.sh $DataPath $/Path/NetworkData.csv $APSILogfileSender.txt > $Logfile2.txt &
         
 ./run_receiver.sh $DataPath $IIintersection.csv intersection.csv $FinalIntersection.csv $APSILogfileReceiver.txt 127.0.0.1 > $Logfile3.txt
 ```
