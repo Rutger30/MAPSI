@@ -61,7 +61,7 @@ int main(int argc, char *argv[]) {
     
     EncryptionParameters parms(scheme_type::bfv);
     parms.set_poly_modulus_degree(poly_modulus_degree);
-    parms.set_coeff_modulus(CoeffModulus::BFVDefault(poly_modulus_degree));
+    parms.set_coeff_modulus(CoeffModulus::Create(poly_modulus_degree, {43, 43, 44, 44}));
     parms.set_plain_modulus(PlainModulus::Batching(poly_modulus_degree, plain_modulus_power));
     SEALContext context(parms);
     
